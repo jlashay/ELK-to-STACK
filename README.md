@@ -32,28 +32,28 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address                 | Operating System |
-|----------|----------|----------------------------|------------------|
-| Jump Box | Gateway  | 10.0.0.5/20.102.120.182    | Linux            |
-| Web-1 VM |          | 10.0.0.8                   | Linux            |
-| Web-2 VM |          | 10.0.0.7                   | Linux            |
-| ELK VM   |          | 10.1.0.4                   | Linux            |
+| Name     | Function  | IP Address | Operating System |
+|----------|-----------|------------|------------------|
+| Jump Box | Gateway   | 10.0.0.5   | Linux            |
+| Web-1 VM | Web Server| 10.0.0.8   | Linux            |
+| Web-2 VM | Web Server| 10.0.0.7   | Linux            |
+| ELK VM   |           | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- 72.210.65.178
 
 Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- Jumpbox | IP private : 10.0.0.5 | IP public : 20.102.120.182
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
+| Jump Box | Yes/No              | 10.0.0.7 10.0.0.8    |
 |          |                     |                      |
 |          |                     |                      |
 

@@ -9,6 +9,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
  https://github.com/jlashay/ELK-to-STACK/blob/main/Ansible/install-elk.yml
  https://github.com/jlashay/ELK-to-STACK/blob/main/Ansible/filebeat.yml
+https://github.com/jlashay/ELK-to-STACK/blob/main/Ansible/metricbeat.yml 
 
 This document contains the following details:
 - Description of the Topologu

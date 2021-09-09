@@ -28,8 +28,8 @@ Load balancing ensures that the application will be highly available, in additio
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- Filebeat watches for system logs data and montiors and reports changes made on the server.
+- Metricbeat records data of running services on your server, and forwards the collected data to Elasticsearch.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -39,14 +39,14 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Jump Box | Gateway   | 10.0.0.5   | Linux            |
 | Web-1 VM | Web Server| 10.0.0.8   | Linux            |
 | Web-2 VM | Web Server| 10.0.0.7   | Linux            |
-| ELK VM   |           | 10.1.0.4   | Linux            |
+| ELK VM   | Web Server| 10.1.0.4   | Ubuntu           |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- 72.210.65.178
+- Local/Personal IP Address 72.210.65.178
 
 Machines within the network can only be accessed by _____.
 - Jumpbox | IP private : 10.0.0.5 | IP public : 20.102.120.182

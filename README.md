@@ -63,7 +63,7 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because the services running can be limited, installations and updates to the system can be streamlined, and the process are replicable.
 
--An main advantage of automating configuration with Ansible is that it is written in Python; which is a human readable langauage.
+- An main advantage of automating configuration with Ansible is that it is written in Python; which is a human readable langauage.
 
 The playbook implements the following tasks:
 - The first install task is for docker.io. Docker is installed to be able to use the docker engine to run and controll the state of our Ansible containers. Then in order to start the docker, we create a a download and launch task for it.
@@ -85,6 +85,8 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - Filebeats helps collect_TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat collects data logs for Elasticsearch like audit logs and server logs to name a few. For example, if a users tries execute an action that they do have have the privilege to, filebeat will doucment a timestamp of that incident in the auditlog.
+- Metricbeat collects the mertic data. An example would be the usgae of memory the current machine and service running.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 

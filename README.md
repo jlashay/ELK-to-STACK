@@ -82,7 +82,7 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 -Filebeats ![Filebeat YAML](https://github.com/jlashay/ELK-to-STACK/blob/main/Ansible/filebeat.yml)
--Metricbeats 
+-Metricbeats ![Metricbeat YAML](https://github.com/jlashay/ELK-to-STACK/blob/main/Ansible/metricbeat.yml)
 
 These Beats allow us to collect the following information from each machine:
 - Filebeats helps collect_TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._

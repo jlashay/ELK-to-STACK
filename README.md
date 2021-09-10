@@ -66,10 +66,9 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 -An main advantage of automating configuration with Ansible is that it is written in Python; which is a human readable langauage.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- The first install task is for docker.io installations, so we would be able to use the docker engine to run and controll the state of our Ansible containers. Then in order to start the docker, we create a dcker 
+- The first install task is for docker.io. Docker is installed to be able to use the docker engine to run and controll the state of our Ansible containers. Then in order to start the docker, we create a a download and launch task for it.
 - We used a a map count task to allow of target machine to user more memory so our Elk can run.
-- Also, another task in the installation is to list the ports that the elk server runs on, and downloading
+- Also, another task in the installation is to list the ports that the elk server runs on, and also adding "sebp/elk:761" in the image sections of this task so it can install the package to Elasticsearch, Logstash, and Kiabana.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -80,9 +79,9 @@ This ELK server is configured to monitor the following machines:
 - Web-1 VM 10.0.0.8
 - Web-2 VM 10.0.0.7
 
-We have installed the following Beats on these machines:
--Filebeats ![Filebeat YAML](https://github.com/jlashay/ELK-to-STACK/blob/main/Ansible/filebeat.yml)
--Metricbeats ![Metricbeat YAML](https://github.com/jlashay/ELK-to-STACK/blob/main/Ansible/metricbeat.yml)
+We have installed the following Beats on these machines: 
+- Filebeats ![Filebeat YAML](https://github.com/jlashay/ELK-to-STACK/blob/main/Ansible/filebeat.yml)
+- Metricbeats ![Metricbeat YAML](https://github.com/jlashay/ELK-to-STACK/blob/main/Ansible/metricbeat.yml)
 
 These Beats allow us to collect the following information from each machine:
 - Filebeats helps collect_TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
@@ -97,7 +96,7 @@ SSH into the control node and follow the steps below:
 - To check the data being recevied; on the Kibana site, you can click on the check data option. 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
--First, you will have to be inside of your ansible container. Syntax "sudo docker start (container name)", then use the syntax "sudo docker attach (container name).
--Next, you will navigate to your anisble directory using the syntax "cd ~/etc/ansible/". 
--To update a host file, you would need to " nano host" , then iput the IP address of the Elk and webservers group with the ending syntax of  "ansible_python_interpreter=/usr/bin/python3".
--To run the yaml playbook file, you will need to enter the sytax " ansible-playbook (yaml file name)" into the command line.
+- First, you will have to be inside of your ansible container. Syntax "sudo docker start (container name)", then use the syntax "sudo docker attach (container name).
+- Next, you will navigate to your anisble directory using the syntax "cd ~/etc/ansible/". 
+- To update a host file, you would need to " nano host" , then iput the IP address of the Elk and webservers group with the ending syntax of  "ansible_python_interpreter=/usr/bin/python3".
+- To run the yaml playbook file, you will need to enter the sytax " ansible-playbook (yaml file name)" into the command line.
